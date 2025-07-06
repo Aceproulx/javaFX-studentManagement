@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.studentmanager.HelloController"
+      spacing="10">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="10">
+        <TextField fx:id="nameField" promptText="Name" />
+        <TextField fx:id="departmentField" promptText="Department" />
+        <TextField fx:id="gpaField" promptText="GPA" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Add" onAction="#handleAdd" />
+        <Button text="Edit" onAction="#handleEdit" />
+        <Button text="Delete" onAction="#handleDelete" />
+        <Button text="Export to CSV" onAction="#handleExport" />
+    </HBox>
+
+
+    <TableView fx:id="tableView" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="departmentColumn" text="Department" prefWidth="150"/>
+            <TableColumn fx:id="gpaColumn" text="GPA" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+</VBox>
